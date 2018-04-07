@@ -4,15 +4,26 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+//Locales
+//Components
+import { HomeComponent }  from './components/home/home.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+
+//Services
+import { YouTubeService } from './services/youtube.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    YouTubeService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
