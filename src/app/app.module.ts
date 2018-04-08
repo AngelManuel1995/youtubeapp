@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 
 
 import { AppComponent } from './app.component';
@@ -8,6 +9,8 @@ import { AppComponent } from './app.component';
 //Components
 import { HomeComponent }  from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+//Pipes
+import { VideoYoutube } from './pipes/video-youtube.pipe';
 
 //Services
 import { YouTubeService } from './services/youtube.service';
@@ -16,10 +19,12 @@ import { YouTubeService } from './services/youtube.service';
   declarations: [
     AppComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    VideoYoutube
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule
   ],
   providers: [
     YouTubeService
